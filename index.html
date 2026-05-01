@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Josh Concepts Multimedia</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -14,26 +15,24 @@ body{
   background:#0B0F17;
   color:#F5F0E8;
   font-family:'DM Sans', sans-serif;
+  text-align:center;
 }
 
+/* HERO */
 .hero{
-  text-align:center;
-  padding:120px 20px 80px;
+  padding:100px 20px 60px;
   background:
-    radial-gradient(circle at 70% 20%, rgba(212,168,71,0.15), transparent 40%),
-    radial-gradient(circle at 30% 80%, rgba(212,168,71,0.08), transparent 50%);
+    radial-gradient(circle at center, rgba(212,168,71,0.15), transparent 60%);
 }
 
 .logo{
-  position:absolute;
-  left:20px;
-  top:20px;
-  width:70px;
+  width:60px;
+  margin-bottom:20px;
 }
 
 .hero-img{
-  width:200px;
-  height:200px;
+  width:180px;
+  height:180px;
   border-radius:50%;
   border:4px solid #D4A847;
   object-fit:cover;
@@ -41,34 +40,27 @@ body{
 }
 
 .hero-title{
-  font-family:'Bebas Neue', sans-serif;
-  font-size:clamp(60px,10vw,110px);
-  line-height:0.9;
+  font-family:'Bebas Neue';
+  font-size:clamp(55px,10vw,100px);
+  line-height:0.95;
 }
 
 .accent{color:#D4A847;}
 
 .hero-sub{
-  margin-top:20px;
-  max-width:600px;
-  margin-left:auto;
-  margin-right:auto;
-  color:rgba(245,240,232,0.7);
-  font-size:16px;
-  line-height:1.7;
+  max-width:500px;
+  margin:20px auto;
+  color:rgba(255,255,255,0.7);
+  line-height:1.6;
 }
 
-.btns{
-  margin-top:30px;
-}
-
+/* BUTTONS */
 .btn{
   display:inline-block;
   margin:10px;
   padding:14px 30px;
-  text-decoration:none;
   font-size:14px;
-  letter-spacing:1px;
+  text-decoration:none;
 }
 
 .primary{
@@ -81,31 +73,26 @@ body{
   color:#D4A847;
 }
 
+/* SERVICES */
 .section{
-  padding:80px 20px;
-  text-align:center;
+  padding:60px 20px;
 }
 
 .section h2{
   font-family:'Bebas Neue';
-  font-size:40px;
+  font-size:36px;
   margin-bottom:20px;
-}
-
-.services{
-  max-width:900px;
-  margin:auto;
-  text-align:left;
 }
 
 .services p{
   margin:10px 0;
-  color:rgba(245,240,232,0.7);
+  color:rgba(255,255,255,0.7);
 }
 
+/* FOOTER */
 footer{
-  text-align:center;
   padding:40px 20px;
+  font-size:12px;
   color:rgba(255,255,255,0.4);
 }
 </style>
@@ -113,9 +100,9 @@ footer{
 
 <body>
 
-<img src="images/logo.png" class="logo">
-
 <section class="hero">
+
+<img src="images/logo.png" class="logo">
 
 <img src="images/me.png" class="hero-img">
 
@@ -125,13 +112,11 @@ DIGITAL PRESENCE
 </h1>
 
 <p class="hero-sub">
-Creative media solutions for brands, businesses, and artists — combining strategy, content, and execution to build something visible, structured, and profitable.
+Creative media solutions for brands, businesses, and artists — helping you build a strong, visible, and profitable digital presence.
 </p>
 
-<div class="btns">
 <a href="https://wa.me/2349027586843" class="btn primary">WhatsApp</a>
 <a href="https://wa.me/2349027586843" class="btn secondary">Consultation</a>
-</div>
 
 </section>
 
@@ -152,104 +137,6 @@ Creative media solutions for brands, businesses, and artists — combining strat
 <footer>
 © Josh Concepts Multimedia
 </footer>
-
-</body>
-</html>  padding:30px;
-  font-size:12px;
-  color:#777;
-}
-</style>
-</head>
-
-<body>
-
-<nav>
-<div class="logo">JOSH <span>CONCEPTS</span></div>
-<a href="https://wa.me/2349027586843" class="nav-btn">CONTACT</a>
-</nav>
-
-<section class="hero">
-
-<img src="images/logo.png" class="logo-img">
-
-<img src="images/me.png" class="profile">
-
-<h1>
-BUILD A <span>STRONG</span><br>
-DIGITAL PRESENCE
-</h1>
-
-<p>
-Creative media solutions for brands, businesses, and artists —
-combining strategy, content, and execution to build something visible,
-structured, and profitable.
-</p>
-
-<a href="https://wa.me/2349027586843" class="btn">
-Book Consultation
-</a>
-
-</section>
-
-<section class="section">
-
-<h2>What I Do</h2>
-<p>I help you plan, create, and execute your media the right way.</p>
-
-<div class="services">
-
-<div class="card">
-<h3>Audio & Music Production</h3>
-<p>Professional sound production with clarity and depth.</p>
-</div>
-
-<div class="card">
-<h3>Video Production</h3>
-<p>Clean, cinematic visuals that communicate your message.</p>
-</div>
-
-<div class="card">
-<h3>Website Design</h3>
-<p>Modern websites built for visibility and conversion.</p>
-</div>
-
-<div class="card">
-<h3>Content & Branding</h3>
-<p>Strategic content that positions your brand properly.</p>
-</div>
-
-<div class="card">
-<h3>Creative Direction</h3>
-<p>Guiding your entire media vision from idea to execution.</p>
-</div>
-
-<div class="card">
-<h3>Live Streaming</h3>
-<p>Reliable setups for events, churches, and conferences.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Why Work With Me</h2>
-<p>
-I don’t just deliver content. I help you think, structure, and execute your media properly.
-Everything is built with clarity, purpose, and long-term growth in mind.
-</p>
-
-</section>
-
-<div class="cta">
-<h2>Ready to Start?</h2>
-<a href="https://wa.me/2349027586843" class="btn">Book Consultation</a>
-</div>
-
-<div class="footer">
-© 2026 Josh Concepts Multimedia
-</div>
 
 </body>
 </html>
