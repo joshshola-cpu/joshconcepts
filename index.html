@@ -25,9 +25,19 @@ nav{
   padding:20px;
 }
 
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  width:40px;
+}
+
 .logo-text{
   font-family:'Bebas Neue';
-  font-size:22px;
+  font-size:20px;
 }
 
 .logo-text span{color:#D4A847;}
@@ -39,40 +49,49 @@ nav{
   text-decoration:none;
 }
 
-/* HERO */
+/* HERO SPLIT */
 .hero{
-  padding:40px 20px 80px;
-  text-align:center;
-  background: radial-gradient(circle, rgba(212,168,71,0.2), transparent 60%);
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  padding:60px 20px;
+  gap:40px;
 }
 
-.hero-img{
-  width:200px;
-  height:200px;
-  border-radius:50%;
-  border:4px solid #D4A847;
-  object-fit:cover;
-  margin-bottom:20px;
+.hero-left{
+  max-width:500px;
 }
 
 .hero-title{
   font-family:'Bebas Neue';
-  font-size:clamp(55px,10vw,100px);
+  font-size:clamp(60px,8vw,110px);
   line-height:0.95;
 }
 
 .accent{color:#D4A847;}
 
 .hero-sub{
-  max-width:500px;
-  margin:20px auto;
+  margin:20px 0;
   color:rgba(255,255,255,0.7);
+}
+
+.hero-right{
+  text-align:center;
+}
+
+.hero-img{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  border:4px solid #D4A847;
+  object-fit:cover;
 }
 
 /* BUTTONS */
 .btn{
   display:inline-block;
-  margin:10px;
+  margin:10px 10px 0 0;
   padding:14px 28px;
   text-decoration:none;
   font-size:14px;
@@ -118,7 +137,6 @@ nav{
   transition:0.3s;
 }
 
-/* GOLD LINE EFFECT */
 .card::before{
   content:'';
   position:absolute;
@@ -158,34 +176,61 @@ footer{
   color:rgba(255,255,255,0.4);
   font-size:12px;
 }
+
+/* MOBILE FIX */
+@media(max-width:768px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-left{
+    order:2;
+  }
+
+  .hero-right{
+    order:1;
+  }
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="logo-text">JOSH <span>CONCEPTS</span></div>
+  <div class="logo">
+    <img src="images/logo.png">
+    <div class="logo-text">JOSH <span>CONCEPTS</span></div>
+  </div>
+
   <a href="https://wa.me/2349027586843" class="nav-btn">CONTACT</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 
-<img src="images/me.png" class="hero-img">
+  <div class="hero-left">
+    <h1 class="hero-title">
+      BUILD A <span class="accent">STRONG</span><br>
+      DIGITAL PRESENCE
+    </h1>
 
-<h1 class="hero-title">
-BUILD A <span class="accent">STRONG</span><br>
-DIGITAL PRESENCE
-</h1>
+    <p class="hero-sub">
+      Creative media solutions for brands, businesses, and artists — helping you build a strong, visible, and profitable digital presence.
+    </p>
 
-<p class="hero-sub">
-Creative media solutions for brands, businesses, and artists. Helping you build a strong, visible, and profitable digital presence.
-</p>
+    <a href="https://wa.me/2349027586843" class="btn primary">WhatsApp</a>
+    <a href="https://wa.me/2349027586843" class="btn secondary">Consultation</a>
+  </div>
 
-<a href="https://wa.me/2349027586843" class="btn primary">WhatsApp</a>
-<a href="https://wa.me/2349027586843" class="btn secondary">Consultation</a>
+  <div class="hero-right">
+    <img src="images/me.png" class="hero-img">
+  </div>
 
 </section>
 
+<!-- SERVICES -->
 <section class="section">
 <h2>What We Do</h2>
 
