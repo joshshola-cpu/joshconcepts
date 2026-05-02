@@ -21,8 +21,7 @@ body{
 /* HERO */
 .hero{
   padding:100px 20px 60px;
-  background:
-    radial-gradient(circle at center, rgba(212,168,71,0.15), transparent 60%);
+  background: radial-gradient(circle, rgba(212,168,71,0.15), transparent 60%);
 }
 
 .logo{
@@ -81,12 +80,41 @@ body{
 .section h2{
   font-family:'Bebas Neue';
   font-size:36px;
-  margin-bottom:20px;
+  margin-bottom:30px;
 }
 
-.services p{
-  margin:10px 0;
-  color:rgba(255,255,255,0.7);
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  max-width:900px;
+  margin:auto;
+}
+
+.card{
+  background:#111827;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.05);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border:1px solid #D4A847;
+  box-shadow:0 10px 30px rgba(212,168,71,0.2);
+}
+
+.card h3{
+  font-family:'Bebas Neue';
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:14px;
+  color:rgba(255,255,255,0.6);
 }
 
 /* FOOTER */
@@ -103,7 +131,6 @@ footer{
 <section class="hero">
 
 <img src="images/logo.png" class="logo">
-
 <img src="images/me.png" class="hero-img">
 
 <h1 class="hero-title">
@@ -123,40 +150,39 @@ Creative media solutions for brands, businesses, and artists — helping you bui
 <section class="section">
 <h2>What We Do</h2>
 
-<div class="service-grid">
+<div class="grid">
 
-  <div class="card">
-    <h3>Audio & Music Production</h3>
-    <p>Professional recording, mixing, and mastering for music, voice, and media.</p>
-  </div>
+<div class="card">
+<h3>Audio & Music Production</h3>
+<p>Professional recording, mixing, and mastering.</p>
+</div>
 
-  <div class="card">
-    <h3>Video Production & Editing</h3>
-    <p>High-quality video production for events, content, and brand storytelling.</p>
-  </div>
+<div class="card">
+<h3>Video Production & Editing</h3>
+<p>High-quality visuals for brands and events.</p>
+</div>
 
-  <div class="card">
-    <h3>Website Design & Digital Setup</h3>
-    <p>Clean, responsive websites built to convert and position your brand.</p>
-  </div>
+<div class="card">
+<h3>Website Design & Digital Setup</h3>
+<p>Clean, responsive websites built to convert.</p>
+</div>
 
-  <div class="card">
-    <h3>Content Creation & Branding</h3>
-    <p>Strategic visuals and content that communicate your identity clearly.</p>
-  </div>
+<div class="card">
+<h3>Content Creation & Branding</h3>
+<p>Creative content that communicates your identity.</p>
+</div>
 
-  <div class="card">
-    <h3>Creative Direction & Consulting</h3>
-    <p>Guidance, structure, and direction to elevate your media presence.</p>
-  </div>
+<div class="card">
+<h3>Creative Direction & Consulting</h3>
+<p>Strategic direction for your media and brand.</p>
+</div>
 
-  <div class="card">
-    <h3>Live Streaming Setup & Execution</h3>
-    <p>Professional streaming systems for churches, events, and broadcasts.</p>
-  </div>
+<div class="card">
+<h3>Live Streaming Setup & Execution</h3>
+<p>Professional streaming systems for events.</p>
+</div>
 
 </div>
-</section>
 
 </section>
 
