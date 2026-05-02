@@ -12,26 +12,43 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-  background:#0B0F17;
+  background:#070B12;
   color:#F5F0E8;
   font-family:'DM Sans', sans-serif;
-  text-align:center;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+}
+
+.logo-text{
+  font-family:'Bebas Neue';
+  font-size:22px;
+}
+
+.logo-text span{color:#D4A847;}
+
+.nav-btn{
+  border:1px solid #D4A847;
+  padding:10px 20px;
+  color:#D4A847;
+  text-decoration:none;
 }
 
 /* HERO */
 .hero{
-  padding:100px 20px 60px;
-  background: radial-gradient(circle, rgba(212,168,71,0.15), transparent 60%);
-}
-
-.logo{
-  width:60px;
-  margin-bottom:20px;
+  padding:40px 20px 80px;
+  text-align:center;
+  background: radial-gradient(circle, rgba(212,168,71,0.2), transparent 60%);
 }
 
 .hero-img{
-  width:180px;
-  height:180px;
+  width:200px;
+  height:200px;
   border-radius:50%;
   border:4px solid #D4A847;
   object-fit:cover;
@@ -50,16 +67,15 @@ body{
   max-width:500px;
   margin:20px auto;
   color:rgba(255,255,255,0.7);
-  line-height:1.6;
 }
 
 /* BUTTONS */
 .btn{
   display:inline-block;
   margin:10px;
-  padding:14px 30px;
-  font-size:14px;
+  padding:14px 28px;
   text-decoration:none;
+  font-size:14px;
 }
 
 .primary{
@@ -74,41 +90,59 @@ body{
 
 /* SERVICES */
 .section{
-  padding:60px 20px;
+  padding:80px 20px;
 }
 
 .section h2{
   font-family:'Bebas Neue';
-  font-size:36px;
-  margin-bottom:30px;
+  text-align:center;
+  font-size:40px;
+  margin-bottom:40px;
 }
 
-/* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  max-width:900px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  max-width:1000px;
   margin:auto;
 }
 
 .card{
-  background:#111827;
-  padding:25px;
-  border-radius:12px;
+  background:#0F1623;
+  padding:30px;
+  border-radius:14px;
   border:1px solid rgba(255,255,255,0.05);
+  position:relative;
+  overflow:hidden;
   transition:0.3s;
 }
 
+/* GOLD LINE EFFECT */
+.card::before{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  height:2px;
+  width:100%;
+  background:#D4A847;
+  transform:scaleX(0);
+  transition:0.3s;
+}
+
+.card:hover::before{
+  transform:scaleX(1);
+}
+
 .card:hover{
-  transform:translateY(-5px);
-  border:1px solid #D4A847;
-  box-shadow:0 10px 30px rgba(212,168,71,0.2);
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
 .card h3{
   font-family:'Bebas Neue';
-  font-size:22px;
+  font-size:24px;
   margin-bottom:10px;
 }
 
@@ -119,18 +153,23 @@ body{
 
 /* FOOTER */
 footer{
-  padding:40px 20px;
-  font-size:12px;
+  text-align:center;
+  padding:40px;
   color:rgba(255,255,255,0.4);
+  font-size:12px;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+  <div class="logo-text">JOSH <span>CONCEPTS</span></div>
+  <a href="https://wa.me/2349027586843" class="nav-btn">CONTACT</a>
+</nav>
+
 <section class="hero">
 
-<img src="images/logo.png" class="logo">
 <img src="images/me.png" class="hero-img">
 
 <h1 class="hero-title">
