@@ -338,6 +338,84 @@ font-size:30px;
 
 }
 
+  /* PORTFOLIO */
+
+.portfolio{
+  padding:120px 8%;
+  background:#070b17;
+}
+
+.portfolio .section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.portfolio .section-title p{
+  color:#d4a84f;
+  letter-spacing:3px;
+  font-size:13px;
+  margin-bottom:10px;
+}
+
+.portfolio .section-title h2{
+  font-size:55px;
+  color:#fff;
+}
+
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
+}
+
+.portfolio-card{
+  background:#0d1324;
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
+  overflow:hidden;
+  transition:0.4s ease;
+}
+
+.portfolio-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.5);
+}
+
+.portfolio-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+
+.portfolio-content{
+  padding:30px;
+}
+
+.portfolio-content h3{
+  font-size:28px;
+  margin-bottom:15px;
+  color:white;
+}
+
+.portfolio-content p{
+  color:#999;
+  line-height:1.8;
+  margin-bottom:25px;
+}
+
+.portfolio-btn{
+  display:inline-block;
+  padding:14px 28px;
+  border:1px solid #d4a84f;
+  color:#d4a84f;
+  text-decoration:none;
+  transition:0.3s ease;
+}
+
+.portfolio-btn:hover{
+  background:#d4a84f;
+  color:black;
+}
 </style>
 </head>
 
@@ -478,7 +556,35 @@ Start a Project
 </div>
 
 </section>
+<!-- PORTFOLIO -->
+<section class="portfolio">
 
+  <div class="section-title">
+    <p>PORTFOLIO</p>
+    <h2>Selected Projects</h2>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <div class="portfolio-card">
+      <img src="images/fashion-project.png" alt="Fashion Brand Website">
+
+      <div class="portfolio-content">
+        <h3>Fashion Brand Website</h3>
+
+        <p>
+          Premium fashion e-commerce experience designed for modern streetwear culture and luxury branding.
+        </p>
+
+        <a href="#" class="portfolio-btn">
+          View Project
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
 <!-- FOOTER -->
 
 <footer>
