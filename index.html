@@ -3,279 +3,486 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Josh Concepts Multimedia</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
-  background:#070B12;
-  color:#F5F0E8;
-  font-family:'DM Sans', sans-serif;
+background:#070b14;
+color:white;
+font-family:'DM Sans',sans-serif;
+overflow-x:hidden;
 }
 
-/* NAV */
+/* BACKGROUND GLOW */
+
+body::before{
+content:'';
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(circle,rgba(212,168,71,0.10),transparent 70%);
+top:-200px;
+right:-200px;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:radial-gradient(circle,rgba(212,168,71,0.08),transparent 70%);
+bottom:-200px;
+left:-200px;
+z-index:-1;
+}
+
+/* NAVBAR */
+
 nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 7%;
+position:sticky;
+top:0;
+background:rgba(7,11,20,0.9);
+backdrop-filter:blur(12px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.logo img{width:40px;}
 
 .logo-text{
-  font-family:'Bebas Neue';
-  font-size:20px;
+font-family:'Bebas Neue',sans-serif;
+font-size:38px;
+letter-spacing:2px;
 }
 
-.logo-text span{color:#D4A847;}
+.logo-text span{
+color:#d4a847;
+}
 
 .nav-btn{
-  border:1px solid #D4A847;
-  padding:10px 20px;
-  color:#D4A847;
-  text-decoration:none;
+text-decoration:none;
+color:#d4a847;
+border:1px solid #d4a847;
+padding:12px 26px;
+border-radius:12px;
+font-size:14px;
+transition:0.3s;
+}
+
+.nav-btn:hover{
+background:#d4a847;
+color:black;
 }
 
 /* HERO */
+
 .hero{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:center;
-  padding:60px 20px;
-  gap:40px;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:100px 7% 80px;
+text-align:center;
+position:relative;
 }
 
-.hero-left{max-width:500px;}
-
-.hero-title{
-  font-family:'Bebas Neue';
-  font-size:clamp(60px,8vw,110px);
-  line-height:0.95;
+.hero-content{
+max-width:1100px;
 }
 
-.accent{color:#D4A847;}
-
-.hero-sub{
-  margin:20px 0;
-  color:rgba(255,255,255,0.7);
+.small-logo{
+width:85px;
+margin-bottom:25px;
 }
-
-.hero-right{text-align:center;}
 
 .hero-img{
-  width:260px;
-  height:260px;
-  border-radius:50%;
-  border:4px solid #D4A847;
-  object-fit:cover;
+width:260px;
+height:260px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid #d4a847;
+box-shadow:0 0 60px rgba(212,168,71,0.25);
+margin-bottom:35px;
 }
 
-/* BUTTONS */
-.btn{
-  display:inline-block;
-  margin:10px 10px 0 0;
-  padding:14px 28px;
-  text-decoration:none;
-  font-size:14px;
+.hero-title{
+font-family:'Bebas Neue',sans-serif;
+font-size:clamp(70px,10vw,140px);
+line-height:0.9;
+letter-spacing:2px;
+margin-bottom:30px;
 }
 
-.primary{
-  background:#D4A847;
-  color:#000;
+.gold{
+color:#d4a847;
 }
 
-.secondary{
-  border:1px solid #D4A847;
-  color:#D4A847;
+.hero-text{
+max-width:850px;
+margin:auto;
+font-size:22px;
+line-height:1.8;
+color:#b9b9b9;
+margin-bottom:45px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn-primary{
+background:#d4a847;
+color:black;
+text-decoration:none;
+padding:18px 38px;
+border-radius:14px;
+font-weight:700;
+transition:0.3s;
+}
+
+.btn-primary:hover{
+transform:translateY(-5px);
+box-shadow:0 0 40px rgba(212,168,71,0.35);
+}
+
+.btn-secondary{
+border:1px solid #d4a847;
+color:#d4a847;
+text-decoration:none;
+padding:18px 38px;
+border-radius:14px;
+transition:0.3s;
+}
+
+.btn-secondary:hover{
+background:#d4a847;
+color:black;
 }
 
 /* SERVICES */
-.section{
-  padding:80px 20px;
+
+.services{
+padding:120px 7%;
 }
 
-.section h2{
-  font-family:'Bebas Neue';
-  text-align:center;
-  font-size:40px;
-  margin-bottom:40px;
+.section-title{
+font-family:'Bebas Neue',sans-serif;
+font-size:90px;
+text-align:center;
+margin-bottom:70px;
+letter-spacing:2px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
-  max-width:1000px;
-  margin:auto;
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-.card{
-  background:#0F1623;
-  padding:30px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,0.05);
-  position:relative;
-  overflow:hidden;
-  transition:0.3s;
+.service-card{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(212,168,71,0.15);
+padding:40px 35px;
+border-radius:28px;
+backdrop-filter:blur(10px);
+transition:0.3s ease;
+position:relative;
+overflow:hidden;
 }
 
-.card::before{
-  content:'';
-  position:absolute;
-  bottom:0;
-  left:0;
-  height:2px;
-  width:100%;
-  background:#D4A847;
-  transform:scaleX(0);
-  transition:0.3s;
+.service-card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:#d4a847;
+transform:scaleX(0);
+transition:0.3s;
 }
 
-.card:hover::before{transform:scaleX(1);}
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+.service-card:hover::before{
+transform:scaleX(1);
 }
 
-.card h3{
-  font-family:'Bebas Neue';
-  font-size:24px;
-  margin-bottom:10px;
+.service-card:hover{
+transform:translateY(-10px);
+border-color:#d4a847;
+box-shadow:0 0 50px rgba(212,168,71,0.12);
 }
 
-.card p{
-  font-size:14px;
-  color:rgba(255,255,255,0.6);
+.service-number{
+font-family:'Bebas Neue',sans-serif;
+font-size:55px;
+color:rgba(212,168,71,0.18);
+margin-bottom:20px;
 }
 
-/* ANIMATION */
-.fade-up{
-  opacity:0;
-  transform:translateY(30px);
-  animation:fadeUp 1s ease forwards;
+.service-card h3{
+font-size:28px;
+margin-bottom:18px;
+color:#d4a847;
+font-family:'Bebas Neue',sans-serif;
+letter-spacing:1px;
 }
 
-.fade-delay-1{animation-delay:0.2s;}
-.fade-delay-2{animation-delay:0.4s;}
-.fade-delay-3{animation-delay:0.6s;}
+.service-card p{
+font-size:16px;
+line-height:1.8;
+color:#c5c5c5;
+}
 
-@keyframes fadeUp{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+/* CTA */
+
+.cta{
+padding:100px 7%;
+text-align:center;
+}
+
+.cta-box{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(212,168,71,0.15);
+padding:70px 40px;
+border-radius:35px;
+max-width:1000px;
+margin:auto;
+}
+
+.cta-box h2{
+font-family:'Bebas Neue',sans-serif;
+font-size:70px;
+line-height:1;
+margin-bottom:25px;
+}
+
+.cta-box p{
+font-size:20px;
+line-height:1.8;
+color:#b9b9b9;
+margin-bottom:35px;
 }
 
 /* FOOTER */
+
 footer{
-  text-align:center;
-  padding:40px;
-  color:rgba(255,255,255,0.4);
-  font-size:12px;
+padding:40px 7%;
+text-align:center;
+border-top:1px solid rgba(255,255,255,0.05);
+margin-top:60px;
+color:#888;
+font-size:15px;
 }
 
 /* MOBILE */
-@media(max-width:768px){
-  .hero{
-    flex-direction:column;
-    text-align:center;
-  }
 
-  .hero-left{order:2;}
-  .hero-right{order:1;}
+@media(max-width:768px){
+
+.hero{
+padding-top:120px;
 }
+
+.hero-img{
+width:210px;
+height:210px;
+}
+
+.hero-title{
+font-size:82px;
+}
+
+.hero-text{
+font-size:18px;
+line-height:1.7;
+}
+
+.section-title{
+font-size:65px;
+}
+
+.cta-box h2{
+font-size:48px;
+}
+
+.cta-box p{
+font-size:17px;
+}
+
+nav{
+padding:20px 5%;
+}
+
+.logo-text{
+font-size:30px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="logo">
-    <img src="images/logo.png">
-    <div class="logo-text">JOSH <span>CONCEPTS</span></div>
-  </div>
+<!-- NAVBAR -->
 
-  <a href="https://wa.me/2349027586843" class="nav-btn">CONTACT</a>
+<nav>
+
+<div class="logo-text">
+JOSH <span>CONCEPTS</span>
+</div>
+
+<a href="https://wa.me/2349027586843" class="nav-btn">
+CONTACT
+</a>
+
 </nav>
 
 <!-- HERO -->
+
 <section class="hero">
 
-  <div class="hero-left fade-up fade-delay-1">
-    <h1 class="hero-title">
-      BUILD A <span class="accent">STRONG</span><br>
-      DIGITAL PRESENCE
-    </h1>
+<div class="hero-content">
 
-    <p class="hero-sub">
-      Creative media solutions for brands, businesses, and artists — helping you build a strong, visible, and profitable digital presence.
-    </p>
+<img src="images/logo.png" class="small-logo">
 
-    <a href="https://wa.me/2349027586843" class="btn primary">WhatsApp</a>
-    <a href="https://wa.me/2349027586843" class="btn secondary">Consultation</a>
-  </div>
+<br>
 
-  <div class="hero-right fade-up fade-delay-2">
-    <img src="images/me.png" class="hero-img">
-  </div>
+<img src="images/me.png" class="hero-img">
+
+<h1 class="hero-title">
+BUILD A <span class="gold">STRONG</span><br>
+DIGITAL PRESENCE
+</h1>
+
+<p class="hero-text">
+Creative media solutions for brands, businesses & artists — combining strategy, content and execution to build something visible, structured and profitable.
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://wa.me/2349027586843" class="btn-primary">
+WhatsApp
+</a>
+
+<a href="https://wa.me/2349027586843" class="btn-secondary">
+Consultation
+</a>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- SERVICES -->
-<section class="section">
-<h2>What We Do</h2>
 
-<div class="grid fade-up fade-delay-3">
+<section class="services">
 
-<div class="card">
+<h2 class="section-title">
+WHAT WE DO
+</h2>
+
+<div class="service-grid">
+
+<div class="service-card">
+<div class="service-number">01</div>
 <h3>Audio & Music Production</h3>
-<p>Professional recording, mixing, and mastering.</p>
+<p>
+Professional recording, mixing, mastering and creative audio production for artists, churches and brands.
+</p>
 </div>
 
-<div class="card">
+<div class="service-card">
+<div class="service-number">02</div>
 <h3>Video Production & Editing</h3>
-<p>High-quality visuals for brands and events.</p>
+<p>
+Cinematic video editing, event coverage, reels, documentaries and premium visual storytelling.
+</p>
 </div>
 
-<div class="card">
-<h3>Website Design & Digital Setup</h3>
-<p>Clean, responsive websites built to convert.</p>
+<div class="service-card">
+<div class="service-number">03</div>
+<h3>Website Design</h3>
+<p>
+Modern websites and digital systems built for visibility, authority and business growth.
+</p>
 </div>
 
-<div class="card">
-<h3>Content Creation & Branding</h3>
-<p>Creative content that communicates your identity.</p>
+<div class="service-card">
+<div class="service-number">04</div>
+<h3>Content & Branding</h3>
+<p>
+Premium content creation and brand visuals that help you stand out professionally.
+</p>
 </div>
 
-<div class="card">
-<h3>Creative Direction & Consulting</h3>
-<p>Strategic direction for your media and brand.</p>
+<div class="service-card">
+<div class="service-number">05</div>
+<h3>Creative Consulting</h3>
+<p>
+Professional media direction, creative strategy and consultation for impactful execution.
+</p>
 </div>
 
-<div class="card">
-<h3>Live Streaming Setup & Execution</h3>
-<p>Professional streaming systems for events.</p>
+<div class="service-card">
+<div class="service-number">06</div>
+<h3>Live Streaming</h3>
+<p>
+Reliable live production setup and execution for churches, conferences and events.
+</p>
 </div>
 
 </div>
 
 </section>
 
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="cta-box">
+
+<h2>
+LET’S BUILD<br>
+SOMETHING GREAT
+</h2>
+
+<p>
+Whether you're building a brand, ministry, business or creative vision — Josh Concepts helps you execute professionally and stand out.
+</p>
+
+<a href="https://wa.me/2349027586843" class="btn-primary">
+Start a Project
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
 <footer>
-© Josh Concepts Multimedia
+© 2026 Josh Concepts Multimedia — All Rights Reserved.
 </footer>
 
 </body>
